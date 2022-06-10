@@ -1,0 +1,11 @@
+Model Information:
+* title:	Escape Room - Environment Piece
+* source:	https://sketchfab.com/3d-models/escape-room-environment-piece-a037f5c558f14d29ab5a1a0521ed2ae9
+* author:	LeahM19 (https://sketchfab.com/LeahM19)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Escape Room - Environment Piece" (https://sketchfab.com/3d-models/escape-room-environment-piece-a037f5c558f14d29ab5a1a0521ed2ae9) by LeahM19 (https://sketchfab.com/LeahM19) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

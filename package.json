@@ -1,0 +1,32 @@
+{
+  "name": "threejs-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && npm run serve",
+    "build": "webpack",
+    "serve": "webpack serve --port 8081"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "ts-loader": "^8.1.0",
+    "typescript": "^4.2.3",
+    "webpack": "^5.30.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@seregpie/three.text-sprite": "^3.2.0",
+    "@types/dat.gui": "^0.7.7",
+    "@types/three": "^0.131.1",
+    "cannon-es": "^0.19.0",
+    "cors": "^2.8.5",
+    "dat.gui": "^0.7.9",
+    "three": "^0.132.2",
+    "three-text2d": "^0.6.0"
+  }
+}

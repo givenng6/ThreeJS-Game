@@ -1,0 +1,11 @@
+Model Information:
+* title:	Marvel's Avengers - Loki's Scepter
+* source:	https://sketchfab.com/3d-models/marvels-avengers-lokis-scepter-5cda736d9ece40b4a79b4bc9a0dd17e7
+* author:	Brock Billings (https://sketchfab.com/Brock.Billings)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Marvel's Avengers - Loki's Scepter" (https://sketchfab.com/3d-models/marvels-avengers-lokis-scepter-5cda736d9ece40b4a79b4bc9a0dd17e7) by Brock Billings (https://sketchfab.com/Brock.Billings) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

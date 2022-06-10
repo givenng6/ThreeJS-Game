@@ -1,0 +1,11 @@
+Model Information:
+* title:	TeaScroll Clubhouse - Empty Room
+* source:	https://sketchfab.com/3d-models/teascroll-clubhouse-empty-room-4d332158ef064340a29c1af90715410d
+* author:	Anaïs Faure (https://sketchfab.com/draeskai)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "TeaScroll Clubhouse - Empty Room" (https://sketchfab.com/3d-models/teascroll-clubhouse-empty-room-4d332158ef064340a29c1af90715410d) by Anaïs Faure (https://sketchfab.com/draeskai) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

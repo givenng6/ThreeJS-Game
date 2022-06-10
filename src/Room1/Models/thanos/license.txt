@@ -1,0 +1,11 @@
+Model Information:
+* title:	Thanos
+* source:	https://sketchfab.com/3d-models/thanos-5eb3e1b92d8946e3913a4e836393ea3d
+* author:	Chris Arthur (https://sketchfab.com/Loblegonst)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Thanos" (https://sketchfab.com/3d-models/thanos-5eb3e1b92d8946e3913a4e836393ea3d) by Chris Arthur (https://sketchfab.com/Loblegonst) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

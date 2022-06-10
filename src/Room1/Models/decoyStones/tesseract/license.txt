@@ -1,0 +1,11 @@
+Model Information:
+* title:	Tesseract
+* source:	https://sketchfab.com/3d-models/tesseract-c6678a45691f43db9ba45573d6f2a407
+* author:	deecube1 (https://sketchfab.com/deecube1)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Tesseract" (https://sketchfab.com/3d-models/tesseract-c6678a45691f43db9ba45573d6f2a407) by deecube1 (https://sketchfab.com/deecube1) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

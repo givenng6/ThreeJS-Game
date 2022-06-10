@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Escape Room</title>
+    <style>
+      body {
+        margin: 0px;
+        overflow: hidden;
+      }
+      .center {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+      }
+      .wave {
+        width: 5px;
+        height: 100px;
+        background: linear-gradient(45deg, cyan, #fff);
+        margin: 10px;
+        animation: wave 1s linear infinite;
+        border-radius: 20px;
+      }
+      .wave:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      .wave:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+      .wave:nth-child(4) {
+        animation-delay: 0.3s;
+      }
+      .wave:nth-child(5) {
+        animation-delay: 0.4s;
+      }
+      .wave:nth-child(6) {
+        animation-delay: 0.5s;
+      }
+      .wave:nth-child(7) {
+        animation-delay: 0.6s;
+      }
+      .wave:nth-child(8) {
+        animation-delay: 0.7s;
+      }
+      .wave:nth-child(9) {
+        animation-delay: 0.8s;
+      }
+      .wave:nth-child(10) {
+        animation-delay: 0.9s;
+      }
+
+      @keyframes wave {
+        0% {
+          transform: scale(0);
+        }
+        50% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(0);
+        }
+      }
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 200px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+      }
+
+      .load {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        /* padding-top: 200px; Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(74, 75, 77); /* Fallback color */
+        background-color: rgba(74, 75, 77, 1); /* Black w/ opacity */
+        flex-direction: column;
+      }
+      .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/c3de685513.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div
+      id="timerDiv"
+      style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 2mm ridge rgba(211, 220, 50, 0.6);
+        padding: 8px;
+        display: none;
+      "
+    >
+      <h3
+        id="timerText"
+        style="
+          position: relative;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          margin: 0;
+          color: #ffffff;
+        "
+      ></h3>
+      <button type="button" id="nathi">Start</button>
+      <h3 id="counter">90</h3>
+      <h3 id="timer"></h3>
+      <div id="retry"></div>
+      <div id="youLose"></div>
+      <div id="YES"></div>
+      <div id="NO"></div>
+    </div>
+
+    
+    <div style="position: absolute; top: 5px; right: 5px; color: white">
+      <h3 id="input"></h3>
+    </div>
+    <div style="position: absolute; top: 5px; right: 5px; color: white">
+      <h3 id="error"></h3>
+    </div>
+
+    <div>
+      <i
+        class="fa-solid fa-pause"
+        id="pauseIcon"
+        style="
+          cursor: pointer;
+          position: absolute;
+          top: 8px;
+          right: 8px;
+          color: black;
+          font-size: 60px;
+          text-shadow: 2px 2px 4px #ffffff;
+        "
+      ></i>
+    </div>
+
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <h2 id="modalText" style="text-align: center; display: none"></h2>
+        <button
+          type="button"
+          class="btn btn-success"
+          id="continueBtn"
+          style="margin-bottom: 10px; background-color: #4a4b4d"
+        >
+          Continue
+        </button>
+        <button
+          type="button"
+          class="btn btn-success"
+          id="restartBtn"
+          style="background-color: #4a4b4d; margin-bottom: 10px"
+        >
+          Restart
+        </button>
+        <button
+          type="button"
+          class="btn btn-success"
+          id="homeBtn"
+          style="background-color: #4a4b4d"
+        >
+          Home
+        </button>
+      </div>
+    </div>
+
+    <div id="loading" class="load">
+      <!-- <h4 id="progress">%</h4> -->
+      <!-- <div class="loader"></div> -->
+      <div class="center">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+      </div>
+    </div>
+
+    <div
+      id="resultAlert"
+      class="alert alert-dark alert-dismissible fade in"
+      role="alert"
+      style="
+        display:none;
+        position: absolute;
+        right: 5px;
+        top: 60px;
+        flex-direction: row;
+        border: 1.5px solid black;
+        background-color: rgb(0, 0, 0, 0.4);
+        color: white;
+      "
+    >
+      <a href="#" class="close" data-dismiss="alert" aria-label="close"
+        >&times;</a
+      >
+      <strong>Info!</strong> Move Forward You Will See Questionaire You Have To Answer <br> If You Get 5 Correct Answers You Escape!
+    </div>
+
+
+    <div
+      id="infoAlert1"
+      class="alert alert-dark alert-dismissible fade in"
+      role="alert"
+      style="
+        display:none;
+        position: absolute;
+        right: 5px;
+        bottom: 1px;
+        flex-direction: row;
+        border: 1.5px solid black;
+        background-color: rgb(0, 0, 0, 0.4);
+        color: white;
+      "
+    >
+      <a href="#" class="close" data-dismiss="alert" aria-label="close"
+        >&times;</a
+      >
+      <strong>Info!</strong> Move Forward You Will See Questionaire You Have To Answer <br> If You Get 5 Correct Answers You Escape!
+    </div>
+
+    <div
+      id="infoAlert2"
+      class="alert alert-dark alert-dismissible fade in"
+      role="alert"
+      style="
+        display:none;
+        position: absolute;
+        right: 5px;
+        bottom: 80px;
+        flex-direction: row;
+        border: 1.5px solid black;
+        background-color: rgb(0, 0, 0, 0.4);
+        color: white;
+      "
+    >
+      <a href="#" class="close" data-dismiss="alert" aria-label="close"
+        >&times;</a
+      >
+      <strong>Info!</strong>If You Give 2 Incorrect Answers, <br> Your Lose And You Die
+    </div>
+
+
+    
+
+    <div
+      id="infoAlert"
+      class="alert alert-dark alert-dismissible fade in"
+      role="alert"
+      style="
+        display:none;
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        flex-direction: row;
+        border: 1.5px solid black;
+        background-color: rgb(0, 0, 0, 0.4);
+        color: white;
+      "
+    >
+      <a href="#" class="close" data-dismiss="alert" aria-label="close"
+        >&times;</a
+      >
+      <strong>Info!</strong> use the space button to open the tiles
+    </div>
+
+
+    
+    <div style="position: absolute; bottom: 5px; right: 5px;">
+      <h3 id="question" style="display: none; color:white"></h3>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
